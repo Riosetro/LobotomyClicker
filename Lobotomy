@@ -1,8 +1,15 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-if game.PlaceId == 16457111401 then
-local Window = OrionLib:MakeWindow({Name = "[UPDATE] Lobotomy Clicker", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/slf0Dev/Ocerium_Project/main/Library.lua"))()
+
+Window = Library.Main("Lobotomy Clicker") -- change "LeftAlt" to key that you want will hide gui
+
+--//tab
+local Tab = Window.NewTab("Lobotomy Clicker")
 
 
+--//section
+local Section = Tab.NewSection("Coins")
 
-end
-OrionLib:Init()
+--// Button
+local Button = Section.NewButton("Infinite Coins",function()
+game:GetService("ReplicatedStorage").Remotes.Egg:InvokeServer("Common Egg",-math.huge) -- code here
+end)
