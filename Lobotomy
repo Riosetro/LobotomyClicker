@@ -1,0 +1,8 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+if game.PlaceId == 16457111401 then
+local Window = OrionLib:MakeWindow({Name = "[UPDATE] Lobotomy Clicker", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+
+
+end
+OrionLib:Init()
